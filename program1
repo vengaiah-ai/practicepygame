@@ -1,0 +1,29 @@
+import pygame
+
+# Initialize Pygame
+pygame.init()
+
+# Set up the window
+size = (400, 300)
+screen = pygame.display.set_mode(size)
+pygame.display.set_caption("My Pygame Window")
+
+# Set up colors
+BLUE = (0, 0, 255)
+
+# Main game loop
+done = False
+while not done:
+    # Handle events
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            done = True
+
+    # Fill the background with blue
+    screen.fill(BLUE)
+
+    # Update the screen
+    pygame.display.flip()
+
+# Quit Pygame
+pygame.quit()
